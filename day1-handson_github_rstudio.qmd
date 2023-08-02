@@ -1,0 +1,42 @@
+---
+title: "GitHub branches using RStudio"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Is your fav' iconic !?!
+
+Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts 
+
+1. Clone the repository you just created to Taylor
+2. Create a new branch using RStudio and name it `myinitials_rstudio`
+3. Start a new script named `desserts_match_myinitials.R` 
+4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see link below) into R and try to determine if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
+
+You can download the iconic data here: <https://github.com/brunj7/EDS-214-analytical-workflows/blob/main/data/iconic_desserts.csv?raw=TRUE>
+
+## Note
+
+Here is how we created the iconic listing
+
+```{r getting the data, eval=FALSE}
+library(tidyverse)
+library(rvest)
+
+# read the webpage code
+webpage <- read_html("https://www.eatthis.com/iconic-desserts-united-states/")
+
+# Extract the desserts listing
+dessert_elements<- html_elements(webpage, "h2")
+dessert_listing <- dessert_elements %>% 
+  html_text2() %>% # extracting the text associated with this type of elements of the webpage
+  as_tibble() %>% # make it a data frame
+  rename(dessert = value) %>% # better name for the column
+  head(.,-3) %>% # 3 last ones were not desserts 
+  rowid_to_column("rank") %>% # adding a column using the row number as proxy for the rank
+  write_csv("data/iconic_desserts.csv") # save it as csv
+
+```
+
