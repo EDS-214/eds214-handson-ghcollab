@@ -1,5 +1,8 @@
 ---
 title: "GitHub branches using RStudio"
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r setup, include=FALSE}
@@ -15,17 +18,18 @@ Write and R script to compare the csv with your favorite desserts you modified p
 3. Start a new script named `desserts_match_myinitials.R` 
 4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see link below) into R and try to determine if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
 
-You can download the iconic data here: <https://github.com/brunj7/EDS-214-analytical-workflows/blob/main/data/iconic_desserts.csv?raw=TRUE>
 
-## Note
-
-Here is how we created the iconic listing
+::: {.callout-tip}
+### Code to get the iconic desserts listing
 
 ```{r getting the data, eval=FALSE}
 library(tidyverse)
-library(rvest)
+library(rvest)  # use to scrape website content
 
-# read the webpage code
+# Check if that data folder exists and creates it if not
+dir.create("data", showWarnings = FALSE)
+
+# Read the webpage code
 webpage <- read_html("https://www.eatthis.com/iconic-desserts-united-states/")
 
 # Extract the desserts listing
@@ -39,4 +43,5 @@ dessert_listing <- dessert_elements %>%
   write_csv("data/iconic_desserts.csv") # save it as csv
 
 ```
+:::
 
