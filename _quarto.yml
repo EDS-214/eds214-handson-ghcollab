@@ -2,5 +2,4 @@ project:
   output-dir: docs
 format:
   html:
-    css: styles.css
     html-math-method: katex
