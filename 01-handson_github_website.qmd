@@ -1,5 +1,8 @@
 ---
 title: "GitHub branches and more using GitHub website"
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r setup, include=FALSE}
