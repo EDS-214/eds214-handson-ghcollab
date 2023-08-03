@@ -16,8 +16,8 @@ Write and R script to compare the csv with your favorite desserts you modified p
 1. Clone the repository you just created to Taylor
 2. Create a new branch using RStudio and name it `*myinitials*_rstudio`
 3. Start a new script named `desserts_match_*myinitials*.R` 
-4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and try to determine if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
-5. push your changes
+4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
+5. Push your changes to GitHub
 6. On the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer
 7. Reviewer -- Review the PR. Make comments and/or OK the merge
 8. Requester -- Merge and close the PR  
