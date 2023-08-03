@@ -117,8 +117,8 @@ Now you want to collaborate more closely and do not wan your teammate to have to
 knitr::include_graphics("img/github-create_branch.png")
 ```
 - Edit the csv file directly on GitHub to add your favorite dessert to it 
-- Create a Pull Request (PR) to merge you branch back to main
-- Assign person 1 as reviewer ([instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review))
+- Create a **P**ull **R**equest (PR) to merge you branch back to main
+- Assign person 1 as a reviewer ([instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review))
 
 #### Person 1: Merge the branch
 
