@@ -3039,14 +3039,18 @@ vertical-align: -.125em;
 
 </header>
 
-<section id="is-your-fav-iconic" class="level2">
-<h2 class="anchored" data-anchor-id="is-your-fav-iconic">Is your fav’ iconic !?!</h2>
+<section id="is-your-fav-dessert-iconic" class="level2">
+<h2 class="anchored" data-anchor-id="is-your-fav-dessert-iconic">Is your fav’ dessert iconic !?!</h2>
 <p>Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts</p>
 <ol type="1">
 <li>Clone the repository you just created to Taylor</li>
-<li>Create a new branch using RStudio and name it <code>myinitials_rstudio</code></li>
-<li>Start a new script named <code>desserts_match_myinitials.R</code></li>
-<li>As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see link below) into R and try to determine if your favorite dessert is part of the <a href="https://www.eatthis.com/iconic-desserts-united-states/">most iconic desserts</a>!</li>
+<li>Create a new branch using RStudio and name it <code>*myinitials*_rstudio</code></li>
+<li>Start a new script named <code>desserts_match_*myinitials*.R</code></li>
+<li>As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and try to determine if your favorite dessert is part of the <a href="https://www.eatthis.com/iconic-desserts-united-states/">most iconic desserts</a>!</li>
+<li>push your changes</li>
+<li>On the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer</li>
+<li>Reviewer – Review the PR. Make comments and/or OK the merge</li>
+<li>Requester – Merge and close the PR</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -3071,11 +3075,11 @@ Code to get the iconic desserts listing
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the desserts listing</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>dessert_elements<span class="ot">&lt;-</span> <span class="fu">html_elements</span>(webpage, <span class="st">&quot;h2&quot;</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>dessert_listing <span class="ot">&lt;-</span> dessert_elements <span class="sc">%&gt;%</span> </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span> <span class="co"># extracting the text associated with this type of elements of the webpage</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> <span class="co"># make it a data frame</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dessert =</span> value) <span class="sc">%&gt;%</span> <span class="co"># better name for the column</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(.,<span class="sc">-</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> <span class="co"># 3 last ones were not desserts </span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowid_to_column</span>(<span class="st">&quot;rank&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># adding a column using the row number as proxy for the rank</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span>             <span class="co"># extracting the text associated with this type of elements of the webpage</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span>              <span class="co"># make it a data frame</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dessert =</span> value) <span class="sc">%&gt;%</span>  <span class="co"># better name for the column</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(.,<span class="sc">-</span><span class="dv">3</span>) <span class="sc">%&gt;%</span>               <span class="co"># 3 last ones were not desserts </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowid_to_column</span>(<span class="st">&quot;rank&quot;</span>) <span class="sc">%&gt;%</span>  <span class="co"># adding a column using the row number as proxy for the rank</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="st">&quot;data/iconic_desserts.csv&quot;</span>) <span class="co"># save it as csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
