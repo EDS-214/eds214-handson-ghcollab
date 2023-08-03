@@ -50,3 +50,6 @@ dessert_listing <- dessert_elements %>%
 ```
 :::
 
+<hr>
+
+Back to main [Repo](https://github.com/brunj7/eds214-handson-ghcollab)

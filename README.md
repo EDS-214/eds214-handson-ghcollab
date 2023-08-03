@@ -1,11 +1,16 @@
 # EDS-214: Collaborative Coding with GitHub - Forking and Branching
 
-This repository compiles the instructions for the Hands-on session of [EDS-214](https://brunj7.github.io/EDS-214-analytical-workflows/) on collaborative coding with GitHub using two different workflows:
+This repository compiles the instructions for the Hands-on session of [EDS-214](https://brunj7.github.io/EDS-214-analytical-workflows/) on collaborative coding with GitHub using two different workflows: Forking & Branching
 
-- Forking
-- Branching
+- [Using the GitHub website](https://brunj7.github.io/eds214-handson-ghcollab/01-handson_github_website.html)
+- [Using Rstudio](https://brunj7.github.io/eds214-handson-ghcollab/02-handson_github_rstudio.html)
 
-<be>
+
+
+
+
+
+<br>
 
 ---
 

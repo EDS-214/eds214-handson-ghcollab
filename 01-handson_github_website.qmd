@@ -127,3 +127,7 @@ knitr::include_graphics("img/github-create_branch.png")
 
 
 ***No need to be a programmer to contribute to analytical workflows with GitHub!!***
+
+<hr>
+
+Back to main [Repo](https://github.com/brunj7/eds214-handson-ghcollab)
