@@ -3,3 +3,6 @@ project:
 format:
   html:
     html-math-method: katex
+    theme: 
+      - cosmo
+      - medsstyles.scss
