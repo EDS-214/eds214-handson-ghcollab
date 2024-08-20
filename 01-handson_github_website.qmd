@@ -40,7 +40,7 @@ We want to log the information about people's favorite desserts using a reposito
 
 #### Person 1 (owner):
 
-- Create a repository using the following these [instructions](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) steps 1-6
+- Create a repository named `favorite-desserts-*myusername*` using these [instructions](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) steps 1-6
 
 ```{r echo=FALSE}
 knitr::include_graphics("img/github-dessert-repo.png")
